@@ -5,10 +5,18 @@ document.getElementById('noakhali-donation-btn').addEventListener('click',functi
                     const noakhaliDonationBalance = parseFloat(document.getElementById('noakhali-donation-balance').innerText)
                     if(noakhaliDonationAmount < 0 || currentBalance < noakhaliDonationAmount){
                                         alert('Invalid Amount')
+                                        const modal = document.getElementById('my_modal_1')
+                                          modal.classList.add('hidden')
                                         return
                     }
+                   
+                    else{
                     document.getElementById('noakhali-donation-balance').innerText =  noakhaliDonationAmount + noakhaliDonationBalance
                     document.getElementById('current-balance').innerText =  currentBalance - noakhaliDonationAmount
+                    const modal = document.getElementById('my_modal_1')
+                    modal.classList.remove('hidden')
+                    }
+                    
 })
 
 // feni flood section
