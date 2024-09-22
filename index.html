@@ -25,12 +25,13 @@
  
                      <!-- font awasome cdn -->
                      <script src="https://kit.fontawesome.com/b0e41e6375.js" crossorigin="anonymous"></script>
+                     
 </head>
 <body class="bg-[#F9F7F3]">
                     <header class="container mx-auto ">
                                         <nav class="flex justify-between pt-6 pb-16  px-10">
                                                             <div class="">
-                                                                                <button class="btn" style="background-color: rgb(180, 244, 97);">Blog</button>
+                                                                                <button class="px-4 py-2 bg-[#B4F461] rounded-lg" >Blog</button>
                                                             </div>
                                                             <div class="flex items-center">
                                                                                 <img src="assets/logo.png" alt="">
@@ -42,13 +43,13 @@
                                                             </div>
                                         </nav>
                                         <div class="bg-white flex justify-center pt-20 gap-4">
-                                                            <button class="btn ">Donation</button>
-                                                            <button class="btn bg-transparent ">History</button>
+                                                            <button class="px-5 py-3 bg-[#B4F461] rounded-lg" id="donation">Donation</button>
+                                                            <button class="px-5 py-3 rounded-lg border " id="history">History</button>
                                         </div>
                     </header>
                     
                     <main class="container mx-auto bg-white">
-                                        <section class="max-w-screen-2xl pt-8">
+                                        <section class="max-w-screen-2xl pt-8 " id="noakhali-flood-section">
                                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 border rounded-2xl mx-8 ">
                                                             <div class="" >
                                                                                 <img class="w-full" src="assets/noakhali.png" alt="">
@@ -62,6 +63,40 @@
                                                                   <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                                                                   <input type="number" id="noakhali-donation-input" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
                                                                   <button class="btn w-full" id="noakhali-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button>
+                                                            </div>
+                                                    </div>
+                                        </section>
+                                        <section class="max-w-screen-2xl pt-8" id="feni-flood-section">
+                                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 border rounded-2xl mx-8 ">
+                                                            <div class="" >
+                                                                                <img class="w-full" src="assets/feni.png" alt="">
+                                                            </div>
+                                                            <div class="space-y-6">
+                                                                  <div class="flex items-center">
+                                                                               <button class="btn"> <img src="assets/coin.png" alt="">
+                                                                                <h1><span id="feni-donation-balance">0</span>BDT</h1></button>
+                                                                  </div>
+                                                                  <h1>Donate for Flood Relief in Feni,Bangladesh</h1>
+                                                                  <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                                                                  <input type="number" id="feni-donation-input" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
+                                                                  <button class="btn w-full" id="feni-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button>
+                                                            </div>
+                                                    </div>
+                                        </section>
+                                        <section class="max-w-screen-2xl pt-8" id="quata-section">
+                                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 border rounded-2xl mx-8 ">
+                                                            <div class="" >
+                                                                                <img class="w-full" src="assets/quota-protest.png" alt="">
+                                                            </div>
+                                                            <div class="space-y-6">
+                                                                  <div class="flex items-center">
+                                                                               <button class="btn"> <img src="assets/coin.png" alt="">
+                                                                                <h1><span id="quata-donation-balance">0</span>BDT</h1></button>
+                                                                  </div>
+                                                                  <h1>Aid for Injured in the Quota Movement</h1>
+                                                                  <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need. </p>
+                                                                  <input type="number" id="quata-donation-input" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
+                                                                  <button class="btn w-full" id="quata-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button>
                                                             </div>
                                                     </div>
                                         </section>
