@@ -19,6 +19,7 @@ document.getElementById('noakhali-donation-btn').addEventListener('click',functi
                     document.getElementById('current-balance').innerText =  currentBalance - noakhaliDonationAmount
                     const modal = document.getElementById('my_modal_1')
                     modal.classList.remove('hidden')
+                   
                     }
                     
 })
@@ -29,11 +30,17 @@ document.getElementById('feni-donation-btn').addEventListener('click',function()
                     const feniDonationAmount = parseFloat(document.getElementById('feni-donation-input').value)
                     const feniDonationBalance = parseFloat(document.getElementById('feni-donation-balance').innerText)
                     if(feniDonationAmount < 0 || currentBalance < feniDonationAmount){
+                      const modal = document.getElementById('my_modal_2')
+                      modal.classList.add('hidden')
                                         alert('Invalid Amount')
                                         return
                     }
-                    document.getElementById('feni-donation-balance').innerText =  feniDonationAmount + feniDonationBalance
+                  else { document.getElementById('feni-donation-balance').innerText =  feniDonationAmount + feniDonationBalance
                     document.getElementById('current-balance').innerText =  currentBalance - feniDonationAmount
+                    const modal = document.getElementById('my_modal_2')
+                    modal.classList.remove('hidden')
+                  }
+
 })
 
 // quata movement section
@@ -42,42 +49,31 @@ document.getElementById('quata-donation-btn').addEventListener('click',function(
                     const quataDonationAmount = parseFloat(document.getElementById('quata-donation-input').value)
                     const quataDonationBalance = parseFloat(document.getElementById('quata-donation-balance').innerText)
                     if(quataDonationAmount < 0 || currentBalance < quataDonationAmount){
+                      const modal = document.getElementById('my_modal_3')
+                      modal.classList.add('hidden')
                                         alert('Invalid Amount')
                                         return
                     }
-                    document.getElementById('quata-donation-balance').innerText =  quataDonationAmount + quataDonationBalance
+                  else { document.getElementById('quata-donation-balance').innerText =  quataDonationAmount + quataDonationBalance
                     document.getElementById('current-balance').innerText =  currentBalance - quataDonationAmount
+                    const modal = document.getElementById('my_modal_3')
+                    modal.classList.remove('hidden')}
 })
 
 // history button click
 document.getElementById('history').addEventListener('click',function(){
-                    const history = document.getElementById('history');
-                    const donation = document.getElementById('donation')
-                    const noakhaliFloodSection = document.getElementById('noakhali-flood-section');
-                    const feniFloodSection = document.getElementById('feni-flood-section');
-                    const quataMovementSection = document.getElementById('quata-section');
-                    noakhaliFloodSection.classList.add('hidden')
-                    feniFloodSection.classList.add('hidden')
-                    quataMovementSection.classList.add('hidden')
-                    history.classList.add('bg-[#B4F461]')
-                    donation.classList.remove('bg-[#B4F461]')
                    
-                    
+                    common('transection-history')
+                    commonColor('history')
+                   
 })
 
 // donation button click
 document.getElementById('donation').addEventListener('click',function(){
-                    const donation = document.getElementById('donation');
-                    const history = document.getElementById('history')
-                    const noakhaliFloodSection = document.getElementById('noakhali-flood-section');
-                    const feniFloodSection = document.getElementById('feni-flood-section');
-                    const quataMovementSection = document.getElementById('quata-section');
-                    noakhaliFloodSection.classList.remove('hidden')
-                    feniFloodSection.classList.remove('hidden')
-                    quataMovementSection.classList.remove('hidden')
-                    history.classList.remove('bg-[#B4F461]')
-                    donation.classList.add('bg-[#B4F461]')
-
+                   
+               common('main')
+               commonColor('donation')
+                  
 })
 
 

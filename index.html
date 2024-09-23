@@ -10,8 +10,8 @@
                      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..900&display=swap" rel="stylesheet">
                      <style>
-                                         .font-manrope{
-                                                             font-family: "Manrope", system-ui;
+                                         .font-lexend{
+                                                 font-family: "Lexend", sans-serif;
                                          }
                                        
                      </style> 
@@ -21,15 +21,11 @@
  
                      <!-- DaisyUI cdn -->
                      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-                     <script src="https://cdn.tailwindcss.com"></script>
- 
-                     <!-- font awasome cdn -->
-                     <script src="https://kit.fontawesome.com/b0e41e6375.js" crossorigin="anonymous"></script>
                      
 </head>
-<body class="bg-[#F9F7F3]">
-                    <header class="container mx-auto ">
-                                        <nav class="flex justify-between pt-6 pb-16  px-10">
+<body class="bg-[#F9F7F3] font-lexend">
+                    <header class="container mx-auto sticky top-0  z-30 ">
+                                        <nav class="flex justify-between pt-6 pb-16  px-10 bg-[#F9F7F3] ">
                                                             <div class="">
                                                                               <button id="blog" class="px-4 py-2 bg-[#B4F461] rounded-lg" >Blog</button>
                                                             </div>
@@ -39,22 +35,22 @@
                                                             </div>
                                                             <div class="flex items-center">
                                                                                 <img src="assets/coin.png" alt="">
-                                                                                <h1><span id="current-balance">6000</span>BDT</h1>
+                                                                                <h1><span id="current-balance">100000</span>BDT</h1>
                                                             </div>
                                         </nav>
-                                        <div class="bg-white flex justify-center pt-20 gap-4">
+                                        <div class="bg-white flex justify-center pt-20 pb-4 gap-4">
                                                             <button class="px-5 py-3 bg-[#B4F461] rounded-lg" id="donation">Donation</button>
                                                             <button class="px-5 py-3 rounded-lg border " id="history">History</button>
                                         </div>
                     </header>
                     
-                    <main class="container mx-auto bg-white">
+                    <main class="container mx-auto bg-white" id="main">
                                         <section class="max-w-screen-2xl pt-8 " id="noakhali-flood-section">
                                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 border rounded-2xl mx-8 ">
                                                             <div class="" >
                                                                                 <img class="w-full" src="assets/noakhali.png" alt="">
                                                             </div>
-                                                            <div class="space-y-6">
+                                                            <div class="space-y-6 flex flex-col justify-center">
                                                                   <div class="flex items-center">
                                                                                <button class="btn"> <img src="assets/coin.png" alt="">
                                                                                 <h1><span id="noakhali-donation-balance">0</span>BDT</h1></button>
@@ -65,13 +61,15 @@
                                                                   <!-- <button class="btn w-full" id="noakhali-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button> -->
                                                                   <button class=" w-full bg-[#B4F461] py-3 rounded-lg" id="noakhali-donation-btn" onclick="my_modal_1.showModal()">Donate Now</button>
                                                                   <dialog id="my_modal_1" class="modal hidden">
-                                                                        <div class="modal-box">
-                                                                          <h3 class="text-lg font-bold">Congrats</h3>
-                                                                          <p class="py-4">Press ESC key or click the button below to close</p>
+                                                                        <div class="modal-box flex flex-col justify-center items-center">
+                                                                          <h3 class="text-lg font-bold">Congrats!</h3>
+                                                                          <img class="py-4" src="assets/coin.png" alt="">
+                                                                          <p class="py-4">You Have Donated for Humankind</p>
+                                                                          <p class="py-4">Successfully</p>
                                                                           <div class="modal-action">
                                                                             <form method="dialog">
                                                                               <!-- if there is a button in form, it will close the modal -->
-                                                                              <button class="btn">Close</button>
+                                                                              <button class="btn">Close Confirmation</button>
                                                                             </form>
                                                                           </div>
                                                                         </div>
@@ -84,7 +82,7 @@
                                                             <div class="" >
                                                                                 <img class="w-full" src="assets/feni.png" alt="">
                                                             </div>
-                                                            <div class="space-y-6">
+                                                            <div class="space-y-6 flex flex-col justify-center">
                                                                   <div class="flex items-center">
                                                                                <button class="btn"> <img src="assets/coin.png" alt="">
                                                                                 <h1><span id="feni-donation-balance">0</span>BDT</h1></button>
@@ -92,7 +90,21 @@
                                                                   <h1>Donate for Flood Relief in Feni,Bangladesh</h1>
                                                                   <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                                                                   <input type="number" id="feni-donation-input" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
-                                                                  <button class="btn w-full" id="feni-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button>
+                                                                  <button class="btn w-full" id="feni-donation-btn" style="background-color: rgb(180, 244, 97);" onclick="my_modal_2.showModal()">Donate Now</button>
+                                                                  <dialog id="my_modal_2" class="modal hidden">
+                                                                    <div class="modal-box flex flex-col justify-center items-center">
+                                                                      <h3 class="text-lg font-bold">Congrats!</h3>
+                                                                      <img class="py-4" src="assets/coin.png" alt="">
+                                                                      <p class="py-4">You Have Donated for Humankind</p>
+                                                                      <p class="py-4">Successfully</p>
+                                                                      <div class="modal-action">
+                                                                        <form method="dialog">
+                                                                          <!-- if there is a button in form, it will close the modal -->
+                                                                          <button class="btn">Close Confirmation</button>
+                                                                        </form>
+                                                                      </div>
+                                                                    </div>
+                                                                  </dialog>
                                                             </div>
                                                     </div>
                                         </section>
@@ -101,7 +113,7 @@
                                                             <div class="" >
                                                                                 <img class="w-full" src="assets/quota-protest.png" alt="">
                                                             </div>
-                                                            <div class="space-y-6">
+                                                            <div class="space-y-6 flex flex-col justify-center">
                                                                   <div class="flex items-center">
                                                                                <button class="btn"> <img src="assets/coin.png" alt="">
                                                                                 <h1><span id="quata-donation-balance">0</span>BDT</h1></button>
@@ -109,11 +121,33 @@
                                                                   <h1>Aid for Injured in the Quota Movement</h1>
                                                                   <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need. </p>
                                                                   <input type="number" id="quata-donation-input" placeholder="Write Donation Amount" class="input input-bordered w-full" required />
-                                                                  <button class="btn w-full" id="quata-donation-btn" style="background-color: rgb(180, 244, 97);">Donate Now</button>
+                                                                  <button class="btn w-full" id="quata-donation-btn" style="background-color: rgb(180, 244, 97);" onclick="my_modal_3.showModal()">Donate Now</button>
+                                                                  <dialog id="my_modal_3" class="modal hidden">
+                                                                    <div class="modal-box flex flex-col justify-center items-center">
+                                                                      <h3 class="text-lg font-bold">Congrats!</h3>
+                                                                      <img class="py-4" src="assets/coin.png" alt="">
+                                                                      <p class="py-4">You Have Donated for Humankind</p>
+                                                                      <p class="py-4">Successfully</p>
+                                                                      <div class="modal-action">
+                                                                        <form method="dialog">
+                                                                          <!-- if there is a button in form, it will close the modal -->
+                                                                          <button class="btn">Close Confirmation</button>
+                                                                        </form>
+                                                                      </div>
+                                                                    </div>
+                                                                  </dialog>
                                                             </div>
                                                     </div>
                                         </section>
-                    </main>
+                                        <section> 
+
+                                        </main>
+                                          <div class="border hidden" id="transection-history">
+                                         <img src="assets/feni.png" alt="">
+                                          </div>
+                                        </section>
+                                       
+                   
            
                     
 
@@ -121,6 +155,7 @@
 
 
 
+<script src="js/utility.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

@@ -10,8 +10,8 @@
                      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..900&display=swap" rel="stylesheet">
                      <style>
-                                         .font-manrope{
-                                                             font-family: "Manrope", system-ui;
+                                         .font-lexend{
+                                                            font-family: "Lexend", sans-serif;
                                          }
                                        
                      </style> 
@@ -21,31 +21,56 @@
  
                      <!-- DaisyUI cdn -->
                      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-                     <script src="https://cdn.tailwindcss.com"></script>
- 
-                     <!-- font awasome cdn -->
-                     <script src="https://kit.fontawesome.com/b0e41e6375.js" crossorigin="anonymous"></script>
                      
 </head>
-<body class="bg-[#F9F7F3]">
-                    <header class="container mx-auto ">
-                                        <nav class="flex justify-between pt-6 pb-16  px-10">
+<body class="font-lexend" >
+                    <header class=" bg-[#F9F7F3]">
+                                        <nav class="flex flex-col md:flex-row justify-center items-center md:justify-between lg:gap-0 gap-5 pt-6 pb-6 lg:pb-16  md:px-10 container mx-auto ">
                                                             <div class="">
-                                                                              <button id="home" class="px-4 py-2 bg-[#B4F461] rounded-lg" >Home</button>
+                                                                              <button id="home" class="px-4 py-2 bg-[#B4F461] rounded-lg text-xl font-semibold" >Home</button>
                                                             </div>
-                                                            <div class="flex items-center">
+                                                            <div class="flex items-center gap-3">
                                                                                 <img src="assets/logo.png" alt="">
-                                                                                <h1>Donate Bangladesh</h1>
+                                                                                <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
                                                             </div>
-                                                            <div class="flex items-center">
+                                                            <div class="flex items-center  gap-3">
                                                                                 <img src="assets/coin.png" alt="">
-                                                                                <h1><span id="current-balance">6000</span>BDT</h1>
+                                                                                <h1 class="text-xl font-medium"><span id="current-balance" class="mr-3">100000</span>BDT</h1>
                                                             </div>
                                         </nav>
                                         
                     </header>
-                    <section>
-                                        
+                    <section class="max-w-screen-lg mx-auto px-2">
+                                       <div class="flex gap-5 items-center">
+                                        <h1 class="text-4xl mb-4 mt-3 font-bold">Important FAQ</h1>
+                                        <img class="w-10" src="assets/comment.png" alt="">
+                                       </div>
+                                        <div tabindex="0" class="collapse collapse-arrow lg:h-40 border-base-300 bg-white border">
+                                                            <div class="collapse-title text-xl font-medium flex  items-center">What is the document of object model(DOM)?</div>
+                                                            <div class="collapse-content ">
+                                                              <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, where each part of the document (like elements, attributes, text) is an object that can be accessed, manipulated, or modified using programming languages such as JavaScript.</p>
+                                                            </div>
+                                                          </div>
+                                        <div tabindex="0" class="collapse collapse-arrow lg:h-40 border-base-300 bg-white border">
+                                                                              <div class="collapse-title text-xl font-medium flex  items-center">How do you select an element from the DOM?</div>
+                                                                              <div class="collapse-content">
+                                                                                <p>In the DOM (Document Object Model), you can select elements using various methods provided by JavaScript. These methods allow you to access specific elements, either by their ID, class, tag, or other attributes.</p>
+                                                                              </div>
+                                                                            </div>
+                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 lg:h-40 bg-white border">
+                                                            <div class="collapse-title text-xl font-medium flex  items-center">What is event delegation in the context of the DOM,and why is it useful?</div>
+                                                            <div class="collapse-content">
+                                                              <p>Event delegation is a technique in JavaScript where you attach a single event listener to a parent element to handle events triggered by its child elements. Instead of adding individual event listeners to each child element, you take advantage of event bubbling, where the event propagates from the child element (where the event occurs) up through the parent elements.
+
+                                                                                This technique is especially useful for efficiently managing events, particularly when you have a large number of child elements or when those child elements are dynamically added or removed.</p>
+                                                            </div>
+                                                          </div>
+                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 lg:h-40 bg-white border">
+                                                            <div class="collapse-title text-xl font-medium flex  items-center">How do you manipulate an element's attributes and styles using the DOM?</div>
+                                                            <div class="collapse-content">
+                                                              <p>In the DOM (Document Object Model), you can easily manipulate an element's attributes (like id, src, href, etc.) and styles using JavaScript. These changes allow you to dynamically modify how elements behave or look on a webpage.</p>
+                                                            </div>
+                                                          </div>
                     </section>
                     <script>
                                         document.getElementById('home').addEventListener('click',function(){
