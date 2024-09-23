@@ -1,3 +1,7 @@
+// blog
+document.getElementById('blog').addEventListener('click',function(){
+  window.location.href = 'blog.html'
+})
 // noakhali flood section
 document.getElementById('noakhali-donation-btn').addEventListener('click',function(){
                     const currentBalance = parseFloat(document.getElementById('current-balance').innerText)
