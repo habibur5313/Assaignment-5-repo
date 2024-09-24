@@ -24,8 +24,8 @@
                      
 </head>
 <body class="font-lexend" >
-                    <header class=" bg-[#F9F7F3]">
-                                        <nav class="flex flex-col md:flex-row justify-center items-center md:justify-between lg:gap-0 gap-5 pt-6 pb-6 lg:pb-16  md:px-10 container mx-auto ">
+                    <header class=" bg-[#F9F7F3] container mx-auto  sticky top-0 bg-opacity-50 z-40" style="backdrop-filter: blur(8px);">
+                                        <nav class="flex flex-col md:flex-row justify-center items-center md:justify-between lg:gap-0 gap-5 pt-6 pb-6 lg:pb-16  md:px-10 ">
                                                             <div class="">
                                                                               <button id="home" class="px-4 py-2 bg-[#B4F461] rounded-lg text-xl font-semibold" >Home</button>
                                                             </div>
@@ -41,32 +41,32 @@
                                         
                     </header>
                     <section class="max-w-screen-lg mx-auto px-2">
-                                       <div class="flex gap-5 items-center">
-                                        <h1 class="text-4xl mb-4 mt-3 font-bold">Important FAQ</h1>
-                                        <img class="w-10" src="assets/comment.png" alt="">
+                                       <div class="flex gap-3 lg:gap-5 items-center">
+                                        <h1 class="lg:text-4xl text-xl md:text-2xl mb-4 mt-3 font-bold">Important FAQ</h1>
+                                        <img class="lg:w-10 w-8" src="assets/comment.png" alt="">
                                        </div>
-                                        <div tabindex="0" class="collapse collapse-arrow lg:h-40 border-base-300 bg-white border">
-                                                            <div class="collapse-title text-xl font-medium flex  items-center">What is the document of object model(DOM)?</div>
+                                        <div tabindex="0" class="collapse collapse-arrow py-3 lg:py-6 border-base-300 bg-white border">
+                                                            <div class="collapse-title text-xl font-semibold flex  items-center">What is the document of object model(DOM)?</div>
                                                             <div class="collapse-content ">
                                                               <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, where each part of the document (like elements, attributes, text) is an object that can be accessed, manipulated, or modified using programming languages such as JavaScript.</p>
                                                             </div>
                                                           </div>
-                                        <div tabindex="0" class="collapse collapse-arrow lg:h-40 border-base-300 bg-white border">
-                                                                              <div class="collapse-title text-xl font-medium flex  items-center">How do you select an element from the DOM?</div>
+                                        <div tabindex="0" class="collapse collapse-arrow py-3 lg:py-6 border-base-300 bg-white border">
+                                                                              <div class="collapse-title text-xl font-semibold flex  items-center">How do you select an element from the DOM?</div>
                                                                               <div class="collapse-content">
                                                                                 <p>In the DOM (Document Object Model), you can select elements using various methods provided by JavaScript. These methods allow you to access specific elements, either by their ID, class, tag, or other attributes.</p>
                                                                               </div>
                                                                             </div>
-                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 lg:h-40 bg-white border">
-                                                            <div class="collapse-title text-xl font-medium flex  items-center">What is event delegation in the context of the DOM,and why is it useful?</div>
+                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 lg:py-6 bg-white border">
+                                                            <div class="collapse-title text-xl font-semibold flex  items-center">What is event delegation in the context of the DOM,and why is it useful?</div>
                                                             <div class="collapse-content">
                                                               <p>Event delegation is a technique in JavaScript where you attach a single event listener to a parent element to handle events triggered by its child elements. Instead of adding individual event listeners to each child element, you take advantage of event bubbling, where the event propagates from the child element (where the event occurs) up through the parent elements.
 
                                                                                 This technique is especially useful for efficiently managing events, particularly when you have a large number of child elements or when those child elements are dynamically added or removed.</p>
                                                             </div>
                                                           </div>
-                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 lg:h-40 bg-white border">
-                                                            <div class="collapse-title text-xl font-medium flex  items-center">How do you manipulate an element's attributes and styles using the DOM?</div>
+                                        <div tabindex="0" class="collapse collapse-arrow border-base-300 py-3 lg:py-6 bg-white border">
+                                                            <div class="collapse-title text-xl font-semibold flex  items-center">How do you manipulate an element's attributes and styles using the DOM?</div>
                                                             <div class="collapse-content">
                                                               <p>In the DOM (Document Object Model), you can easily manipulate an element's attributes (like id, src, href, etc.) and styles using JavaScript. These changes allow you to dynamically modify how elements behave or look on a webpage.</p>
                                                             </div>
